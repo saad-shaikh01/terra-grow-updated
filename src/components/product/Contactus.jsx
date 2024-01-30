@@ -440,7 +440,7 @@ function Contactus() {
             Whether you have questions about our services, suggestions for improvement,
             or any other matter, we're here to help.
           </p>
-          <p className='text-white pt-20' data-aos="fade-up">Email : <span className='text-gray-300 border-gray-300 border-b font-medium'>Office@drivetechnology.co</span></p>
+          <p className='text-white pt-20' data-aos="fade-up">Email : <span className='text-gray-300 border-gray-300 border-b font-medium'>info@terra-grow.com.au</span></p>
           <p className='text-white pt-2 text-sm' data-aos="fade-right">
             <i>We aim to respond to all emails within 24 hours during business days. Thank you for choosing to connect
               with us.</i>

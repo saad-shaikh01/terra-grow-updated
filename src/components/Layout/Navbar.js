@@ -122,7 +122,7 @@ function Navbar({ services, developments, route }) {
                 <Link to="/blog" onClick={() => handleNavigation("/contact")}>
                   <li
                     className={`${
-                      location.pathname === "/contact" ? "text-[#ffffff] border-b-[white]" : "text-white"
+                      location.pathname === "/blog" ? "text-[#ffffff] border-b-[white]" : "text-white"
                     }  lg:text-[14px] font-normal font-Rubik tracking-widest text-[10px] duration-300 ease-in-out border-b-[1px] border-transparent hover:border-b-[white]`}
                   >
                     BLOGS
