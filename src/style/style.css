@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+overflow-x: hidden;
+}
+
+.blog-main{
+    background-image: url('../Assets/Blog/blog-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-header-main{
+    background-image: url('../Assets/Home-Head/home-headbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pledgeHeader-main{
+   /* background-image: url('../Assets/Our-Pledge/Ourpledge-bg.png'); */
+   background-image: url('../Assets/Our-Pledge/Rectangle 22600.png');
+   background-repeat: no-repeat;   
+   background-size: 100% ;
+   /* height: 140vh; */
+   /* width: 100vw; */
+
+}
+
+.button{
+    position: relative;
+    z-index: 2;
+  }
+
+.blogpage-main{
+    background-image: url('../Assets/Blog/blogpage-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backgroundimg {
+    background: url('../Assets/freshGreen.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.bgproduct1 {
+    background: url('../Assets/firstHeader.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.bgproduct2 {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+}
+.bgproduct3 {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+}
+
+.faq-row-wrapper  {
+    background-color: transparent !important;
+}
+ svg {
+    fill: #fff !important; /* Use !important if needed */
+    font-weight: bold;
+}
+/* @media only screen and (min-width: 400px) {
+    .mediaquery {
+        height: 500px;
+    }
+}
+@media only screen and (min-width: 440px) {
+    .mediaquery {
+        height: 600px;
+    }
+} */
+@media only screen and (min-width: 1900px) {
+    .mediaquery {
+        height: 800px;
+    }
+}
+
+.PhoneInputInput {
+	/* The phone number input stretches to fill all empty space */
+	flex: 1;
+	min-width: 0;
+  outline: none;
+}
+
+.contact-img {
+    background: url('../Assets/contact-img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.textdesign1 {
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    transform: translate(50%, 0%);
+    transform: rotate(270deg);
+    letter-spacing: 30px;
+}
+.textdesign2 {
+    position: absolute;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+.textproduct3 {
+    position: absolute;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+@media only screen and (max-width: 975px){
+    .textdesign1 {
+        left: -180px;
+    }
+    .textdesign2 {
+        font-size: 150px;
+    }   
+}
+@media only screen and (max-width: 768px){
+    .textdesign1 {
+        display: none;
+    }
+    .textdesign2 {
+        display: none;
+    }   
+}
+
+
+.goalpage-main{
+    background-image: url('../Assets/freshGreen.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #020617;
+}
+/* .goal1-main{
+    background-image: url('../Assets/Our-Pledge/Goal1-bg.png');
+    background-position: center;
+} */
+/* .goal2-main{
+    background-image: url('../Assets/Our-Pledge/goal2-bg.png');
+    background-position: center;
+} */
+/* .goal3-main{
+    background-image: url('../Assets/Our-Pledge/goal3-bg.png');
+    background-position: center;
+} */
+/* .goal12-main{
+    background-image: url('../Assets/Our-Pledge/goal12-bg.png');
+    background-position: center;
+} */
+/* .goal15-main{
+    background-image: url('../Assets/Our-Pledge/goal15-bg.png');
+    background-position: center;
+<<<<<<< HEAD
+}*/
+
+.scroll-to-top {
+    position: fixed;
+    z-index: 11111;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #020617;
+    color: white;
+    border: none;
+    border-radius: 48px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  }
+.goal-head{
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    list-style: number !important;
+}
+@media only screen and (min-width: 1024px){
+   
+  .button:hover {
+    color: white;
+  }
+  
+  .button:hover:after {
+    width: 100%;
+  }
+  
+  .button:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.35s;
+    background-color: #000B15;
+  }
+}
+
+.faq-question {
+    color: white; /* Change the color as needed */
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 152.688%; /* 36.645px */
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .faq-answer {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152.688%; /* 36.645px */
+    opacity: 0.8;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    cursor: pointer; /* Apply pointer cursor to the icon */
+  }
+
+  @media only screen and (min-width: 1800px){
+   
+   .PledgeContent {
+    /* background-color: red !important; */
+    height: 120vh;
+   }
+}  
