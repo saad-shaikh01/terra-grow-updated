@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Circles } from "react-loader-spinner";
-
+import defaultImageUrl from "../../Assets/Blog/Blog-img2.png";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [page, setPage] = useState(1);
@@ -31,23 +31,24 @@ const Blogs = () => {
         const response = await axios.get(
           `https://accessible-bubble-25ccb03cca.strapiapp.com/api/blogs?populate=*&sort[0]=createdAt:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
         );
-    
+
         // Assuming your API response has a property like `total` representing the total count
         setTotalCount(response.data.total);
-    
+
         // Check if 'data' property exists in the response before setting the state
         if (response.data && response.data.data) {
           // Update the blogs state with the fetched data
           setBlogs(response.data.data);
         } else {
           // Handle the case where 'data' property is missing or null
-          console.error("Invalid API response format: 'data' property not found");
+          console.error(
+            "Invalid API response format: 'data' property not found"
+          );
         }
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-    
 
     fetchData();
   }, [page, pageSize]); // The useEffect will re-run whenever `page` or `pageSize` changes
@@ -78,6 +79,22 @@ const Blogs = () => {
                       options
                     );
 
+                    // // Check if thumbnail is present
+                    // let thumbnailUrl =
+                    //   blog?.attributes?.thumbnail?.data[0]?.attributes?.url;
+
+                    // // Use the default image if thumbnail is not present
+                    // if (!thumbnailUrl) {
+                    //   thumbnailUrl = defaultImageUrl;
+                    // }
+
+                    // Check if thumbnail is present and has at least one element
+                    let thumbnailData = blog?.attributes?.thumbnail?.data;
+                    let thumbnailUrl =
+                      thumbnailData && thumbnailData.length > 0
+                        ? thumbnailData[0]?.attributes?.url
+                        : defaultImageUrl;
+                    console.log(thumbnailUrl);
                     return (
                       <Link
                         to={`/blogs/${blog?.attributes?.slug}`}
@@ -87,8 +104,8 @@ const Blogs = () => {
                         <div className="img-container w-[230px] h-[210px]">
                           <img
                             // unoptimized={true}
-                            // src={`http://localhost:1337${blog?.attributes?.thumbnail?.data?.attributes?.url}`}
-                            src={`${blog?.attributes?.thumbnail?.data[0]?.attributes?.url}`}
+                            src={thumbnailUrl}
+                            // src={`${blog?.attributes?.thumbnail?.data?.attributes?.url}`}
                             alt="img"
                             className="w-[100%] h-[100%] object-cover"
                             // width={100}
@@ -127,7 +144,7 @@ const Blogs = () => {
                   >
                     {totalCount > 0 ? (
                       // Data not found message
-                      <p style={{ color: "white",  fontSize: "18px" }}>
+                      <p style={{ color: "white", fontSize: "18px" }}>
                         Data not found
                       </p>
                     ) : (
