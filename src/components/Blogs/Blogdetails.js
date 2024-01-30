@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -7,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp as farThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { Circles } from "react-loader-spinner";
+import defaultCoverImageUrl from '../../Assets/Blog/blogdetails-img.png'
 const BlogDetails = () => {
   const { slug } = useParams();
   const [blog, setBlog] = useState([]);
@@ -34,11 +34,14 @@ const BlogDetails = () => {
         // await axios.put(`http://localhost:1337/api/blogs/${blog[0]?.id}`, {
         //   likes: blog[0]?.attributes?.likes + 1,
         // });
-        await axios.put(`https://accessible-bubble-25ccb03cca.strapiapp.com/api/blogs/${blog[0]?.id}`, {
-          data: {
-            likes: blog[0]?.attributes?.likes + 1,
-          },
-        });
+        await axios.put(
+          `https://accessible-bubble-25ccb03cca.strapiapp.com/api/blogs/${blog[0]?.id}`,
+          {
+            data: {
+              likes: blog[0]?.attributes?.likes + 1,
+            },
+          }
+        );
 
         // Update the local state to reflect the new like count
         setBlog((prevBlog) => [
@@ -112,7 +115,7 @@ const BlogDetails = () => {
                   {blog[0]?.attributes?.count} Reads
                 </span>
               </div>
-              <div className="img-container py-[48px]">
+              {/* <div className="img-container py-[48px]">
                 {blog[0]?.attributes && (
                   <img
                     // unoptimized={true}
@@ -124,10 +127,24 @@ const BlogDetails = () => {
                   />
                 )}
 
+              </div> */}
+
+              <div className="img-container py-[48px]">
+                {blog[0]?.attributes &&
+                blog[0]?.attributes?.cover?.data &&
+                blog[0]?.attributes?.cover?.data.length > 0 ? (
+                  <img
+                    src={blog[0]?.attributes?.cover?.data[0]?.attributes?.url}
+                    alt="img"
+                  />
+                ) : (
+                  <img src={defaultCoverImageUrl} alt="default img" />
+                )}
               </div>
-              {
-                console.log(blog[0]?.attributes?.cover?.data[0]?.attributes?.url)
-              }
+
+              {console.log(
+                blog[0]?.attributes?.cover?.data[0]?.attributes?.url
+              )}
               <div className=" md:px-[120px]  flex flex-col gap-y-[32px] font-jakarta">
                 {/* <div className="flex gap-x-[9px] justify-center items-center">
                   <button  className="text-white">
