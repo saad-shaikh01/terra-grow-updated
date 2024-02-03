@@ -205,8 +205,6 @@
 
 // // export default Contact;
 
-
-
 // import React, { useState } from "react";
 // import "react-phone-number-input/style.css";
 // import PhoneInput from "react-phone-number-input";
@@ -238,7 +236,6 @@
 //       }));
 //     }
 //   };
-
 
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
@@ -288,8 +285,6 @@
 //         });
 //       }
 //     };
-
-
 
 //   return (
 //     <div className="w-[100%] p-[20px]">
@@ -375,27 +370,29 @@
 
 // export default Form;
 
-import React, { useEffect, useRef } from 'react';
-import AOS from 'aos';
-import { useLocation } from 'react-router-dom'; // Import useLocation hook
-import 'aos/dist/aos.css'; // Import the AOS styles
-import TerragrowHeading3 from '../../components/TerragrowHeading3';
+import React, { useEffect, useRef } from "react";
+import AOS from "aos";
+import { useLocation } from "react-router-dom"; // Import useLocation hook
+import "aos/dist/aos.css"; // Import the AOS styles
+import TerragrowHeading3 from "../../components/TerragrowHeading3";
+import UAE from "../../Assets/UAE.png";
+import UK from "../../Assets/United-kingdom.png";
+import AUS from "../../Assets/Australia.png";
 
 function Contactus() {
   const location = useLocation(); // Use the useLocation hook
   const contactRef = useRef(null);
-  console.log("here is ", location)
+  console.log("here is ", location);
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
-  
-  
+
     // Check if location is defined and has state
     if (location && location.state && location.state.scrollToSection) {
       // Scroll to the contact element
       if (contactRef.current) {
-        contactRef.current.scrollIntoView({ behavior: 'smooth' });
+        contactRef.current.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
@@ -415,39 +412,94 @@ function Contactus() {
   // }, [props.location]);
 
   return (
-    <div className='w-full' >
-      <div className='bg-[#000B15] w-full py-12 lg:py-16' data-aos="flip-down">
-        <TerragrowHeading3 className="" />
-        <h1 className='text-5xl text-end pt-8 pr-8 text-gray-600 select-none' data-aos="fade-up">✽✽✽</h1>
+    <div className="w-full min-h-[100vh]">
+      <div
+        ref={contactRef}
+        className="py-8 py-10 lg:py-20  w-[100%] flex items-center justify-center contact-img"
+        data-aos="flip-up"
+      >
 
-        <div className='w-[100%] py-4'>
-          <h1 className='text-center text-4xl text-white font-Roboto font-bold' data-aos="fade-left">WHO WE ARE</h1>
-          <hr className='h-1 bg-[#020617] w-[130px] mx-auto rounded-full mt-4'></hr>
-          <p className='w-[70%] text-justify md:text-center text-gray-200 lg:text-xl  mx-auto mt-8 font-medium' data-aos="fade-up">
-          TERRAGROW Is an agritech startup that has taken the farming industry by storm with its groundbreaking approach to HYDROPONIC GREENHOUSE FARMING. By combining 
-          renewable resources and cutting-edge technology. TERRAGROW is REDEFINING SUSTAINBLE AGRICULTURE PRACTICES.
+        <div className="w-[80%]">
+          <h1
+            className="font-Roboto pt-12 text-5xl font-bold text-white pt-10 text-center"
+            data-aos="fade-left"
+          >
+            Contact
+          </h1>
+          <p
+            className="text-white pt-8 w-[95%] text-center"
+            data-aos="fade-down"
+          >
+            We value your feedback and inquiries. Feel free to get in touch with
+            us via email for prompt assistance. Whether you have questions about
+            our services, suggestions for improvement, or any other matter,
+            we're here to help.
           </p>
+
+          <div className="pt-12">
+            <h1
+              className="font-Roboto text-5xl font-bold text-white text-center"
+              data-aos="fade-left"
+            >
+              Address:
+            </h1>
+
+            <div className="grid grid-cols-2 my-12">
+              <div className="flex gap-4 items-center">
+                <img src={UAE} />
+                <p className="text-white w-[350px]" data-aos="fade-down">
+                  Sharjah UAE: Business Bay, Sharjah Publishing City Freezone,
+                  United Arab Emirates (UAE)
+                </p>
+              </div>
+
+              <div className="flex justify-center gap-4 items-center">
+                <img src={AUS} />
+                <p className="text-white w-[350px]" data-aos="fade-down">
+                  Australia: PO Box 95, Bardwell Park, NSW 2207
+                </p>
+              </div>
+
+              <div className="flex gap-4 items-center mt-12 bg-red-4004">
+                <img src={UK} />
+                <p className="text-white w-[370px]" data-aos="fade-down">
+                  United Kingdom: Office 1414, 182-184 High Street North East
+                  Ham, London, E6 2JA
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="">
+            <h1
+              className="font-Roboto text-5xl pt-12 font-bold text-white text-center"
+              data-aos="fade-left"
+            >
+              Contact Details:
+            </h1>
+
+            <div className="grid grid-cols-2 my-4 justify-center">
+              <div className="w-[300px] mx-auto">
+                <p className="text-white pt-4 w-[350px]" data-aos="fade-down">
+                  info@terra-grow.com
+                </p>
+              </div>
+
+              <div className="w-[300px] mx-auto">
+                <p className="text-white pt-4 w-[350px]" data-aos="fade-down">
+                  info@terra-grow.com.au
+                </p>
+              </div>
+
+              <div className="w-[300px] pt-4 mx-auto">
+                <p className="text-white w-[370px]" data-aos="fade-down">
+                  info@drivetechnology.co
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <h1 className='text-5xl text-start pb-8 pl-8 text-gray-600 select-none' data-aos="fade-down">✽✽✽</h1>
       </div>
-
-      <div ref={contactRef} className='py-8  w-[100%] flex items-center justify-center contact-img' data-aos="flip-up">
-        <div className='w-[80%]'>
-          <h1 className='font-Roboto text-5xl font-bold text-white pt-10' data-aos="fade-left">CONTACT</h1>
-          <p className='text-white text-justify md:text-start pt-8 w-[95%]' data-aos="fade-down">
-            We value your feedback and inquiries. Feel free to get in touch with us via email for prompt assistance.
-            Whether you have questions about our services, suggestions for improvement,
-            or any other matter, we're here to help.
-          </p>
-          <p className='text-white pt-20' data-aos="fade-up">Email : <span className='text-gray-300 border-gray-300 border-b font-medium'>info@terra-grow.com.au</span></p>
-          <p className='text-white pt-2 text-sm' data-aos="fade-right">
-            <i>We aim to respond to all emails within 24 hours during business days. Thank you for choosing to connect
-              with us.</i>
-          </p>
-        </div>
-      </div>
-
     </div>
   );
 }

@@ -111,10 +111,11 @@ overflow-x: hidden;
 }
 
 .contact-img {
-    background: url('../Assets/contact-img.png');
+    background: url('../Assets/Contact\ Us.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 
 }
 .textdesign1 {

@@ -23,7 +23,7 @@ function Contact() {
     // textClr: "rgb(7, 153, 186)",
   };
   return (
-    <div className="min-h-[100vh] bg-[#000B15] flex items-center">
+    <div className="flex items-center">
       {loading ? (
         <div
           style={{

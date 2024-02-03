@@ -34,7 +34,7 @@ function Footer() {
 
         </div>
 
-        <p className="text-center text-base font-normal font-sans leading-12">2023</p>
+        <p className="text-center text-base font-normal font-sans leading-12">2024</p>
 
 
       </div>
