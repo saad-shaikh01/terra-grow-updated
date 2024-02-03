@@ -415,19 +415,19 @@ function Contactus() {
     <div className="w-full min-h-[100vh]">
       <div
         ref={contactRef}
-        className="py-8 py-10 lg:py-20  w-[100%] flex items-center justify-center contact-img"
+        className="py-8 py-10 lg:py-20  w-[100%] flex items-center justify-center"
         data-aos="flip-up"
       >
 
         <div className="w-[80%]">
           <h1
-            className="font-Roboto pt-12 text-5xl font-bold text-white pt-10 text-center"
+            className="font-Roboto pt-12 text-3xl md:text-5xl font-bold text-white pt-10 text-center"
             data-aos="fade-left"
           >
             Contact
           </h1>
           <p
-            className="text-white pt-8 w-[95%] text-center"
+            className="text-white pt-8 xl:w-[1020px] mx-auto w-[95%] text-center"
             data-aos="fade-down"
           >
             We value your feedback and inquiries. Feel free to get in touch with
@@ -438,31 +438,31 @@ function Contactus() {
 
           <div className="pt-12">
             <h1
-              className="font-Roboto text-5xl font-bold text-white text-center"
+              className="font-Roboto text-3xl md:text-5xl font-bold text-white text-center"
               data-aos="fade-left"
             >
               Address:
             </h1>
 
-            <div className="grid grid-cols-2 my-12">
-              <div className="flex gap-4 items-center">
-                <img src={UAE} />
-                <p className="text-white w-[350px]" data-aos="fade-down">
+            <div className="grid md:grid-cols-2 my-12">
+              <div className="flex gap-4  items-center">
+                <img src={UAE} data-aos="fade-down"/>
+                <p className="text-white md:w-[350px]" data-aos="fade-down">
                   Sharjah UAE: Business Bay, Sharjah Publishing City Freezone,
                   United Arab Emirates (UAE)
                 </p>
               </div>
 
-              <div className="flex justify-center gap-4 items-center">
-                <img src={AUS} />
-                <p className="text-white w-[350px]" data-aos="fade-down">
+              <div className="flex mt-8 md:mt-0 md:justify-center gap-4 items-center">
+                <img src={AUS} data-aos="fade-down"/>
+                <p className="text-white md:w-[350px]" data-aos="fade-down">
                   Australia: PO Box 95, Bardwell Park, NSW 2207
                 </p>
               </div>
 
-              <div className="flex gap-4 items-center mt-12 bg-red-4004">
-                <img src={UK} />
-                <p className="text-white w-[370px]" data-aos="fade-down">
+              <div className="flex gap-4 mt-8 items-center md:mt-8 bg-red-4004">
+                <img src={UK} data-aos="fade-down"/>
+                <p className="text-white md:w-[370px]" data-aos="fade-down">
                   United Kingdom: Office 1414, 182-184 High Street North East
                   Ham, London, E6 2JA
                 </p>
@@ -472,27 +472,27 @@ function Contactus() {
 
           <div className="">
             <h1
-              className="font-Roboto text-5xl pt-12 font-bold text-white text-center"
+              className="font-Roboto text-3xl md:text-5xl pt-12 font-bold text-white text-center"
               data-aos="fade-left"
             >
               Contact Details:
             </h1>
 
-            <div className="grid grid-cols-2 my-4 justify-center">
-              <div className="w-[300px] mx-auto">
-                <p className="text-white pt-4 w-[350px]" data-aos="fade-down">
+            <div className="grid md:grid-cols-2 my-4 justify-center">
+              <div className="w-[300px] md:mx-auto">
+                <p className="text-white text-center md:text-start pt-4 md:w-[350px]" data-aos="fade-down">
                   info@terra-grow.com
                 </p>
               </div>
 
-              <div className="w-[300px] mx-auto">
-                <p className="text-white pt-4 w-[350px]" data-aos="fade-down">
+              <div className=" w-[300px] md:mx-auto">
+                <p className="text-white text-center md:text-end pt-4 md:w-[350px]" data-aos="fade-down">
                   info@terra-grow.com.au
                 </p>
               </div>
 
-              <div className="w-[300px] pt-4 mx-auto">
-                <p className="text-white w-[370px]" data-aos="fade-down">
+              <div className="w-[300px] pt-4 md:mx-auto">
+                <p className="text-white text-center md:text-start md:w-[370px]" data-aos="fade-down">
                   info@drivetechnology.co
                 </p>
               </div>

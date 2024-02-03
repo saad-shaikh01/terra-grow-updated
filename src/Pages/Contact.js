@@ -23,7 +23,7 @@ function Contact() {
     // textClr: "rgb(7, 153, 186)",
   };
   return (
-    <div className="flex items-center">
+    <div className="flex items-center contact-img">
       {loading ? (
         <div
           style={{
