@@ -3,12 +3,9 @@ import "../../style/style.css";
 import TerragrowHeading1 from "../TerragrowHeading1";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import pledgeImage3 from "../../Assets/Our-Pledge/Sustaible 2.png";
-import pledgeLayer from "../../Assets/Our-Pledge/pledge-layers.png";
-// import rectangle22600 from "../../Assets/Our-Pledge/Rectangle 22600.png";
 import rectangle22600 from "../../Assets/Our-Pledge/Group 100000.png";
-import headerBg from "../../Assets/Our-Pledge/Ourpledge-bg.png";
+
 
 function PledgeHeader() {
   useEffect(() => {
@@ -20,7 +17,7 @@ function PledgeHeader() {
     <div className=" h-[100vh]">
       {/* <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center"> */}
       <img src={rectangle22600} alt="" className="lg:block hidden relative w-full lg:h-[900px] xl:h-auto h-auto z-[9] " />
-      <img src={headerBg} alt="" className="lg:hidden block relative w-full min-h-[100vh] object-cover " />
+      {/* <img src={headerBg} alt="" className="lg:hidden block relative w-full min-h-[100vh] object-cover " /> */}
       {/* </div> */}
       <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center lg:z-[99] justify-center">
         <TerragrowHeading1 />
